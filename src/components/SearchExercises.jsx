@@ -7,7 +7,11 @@ import useStore from '../store';
 const url = 'https://exercisedb.p.rapidapi.com/exercises'
 
 function SearchExercises() {
-  const  {TypesArray,setDataType,setShowExercise}  = useStore()
+  const  {
+  TypesArray,
+  setDataType,
+  setShowExercise,
+  GetClickedExercise}  = useStore()
   const [search,setSearch] = useState('');
   const [exercise,setExercise] = useState([]);
   const [bodyPart,setBodyPart] = useState([]);
@@ -29,17 +33,9 @@ function SearchExercises() {
 
   
   const handleSubmit = async(e) =>{
+    e.preventDefault();
     if(search){
-      const exerciseData = await fetchData(url,options);
-      // bec0z i m using here syntax(()=>()) not this (()=>{}) so no need to say return
-      const searchedExercise = exerciseData.filter((exercises)=>
-        exercises.name.toLowerCase().includes(search) ||
-        exercises.target.toLowerCase().includes(search) ||
-        exercises.bodyPart.toLowerCase().includes(search) ||
-        exercises.equipment.toLowerCase().includes(search)
-      );
-      setSearch('');
-      setExercise(searchedExercise);
+      GetClickedExercise(search);
     }
 
 

@@ -18,9 +18,7 @@ function Exercises() {
 
   const paginate = (event, value) => {
     setIndex(value)
-    // setCurrentPage(value);
-
-    // window.scrollTo({ top: 1800, behavior: 'smooth' });
+    window.scrollTo({ top: 1600, behavior: 'smooth' });
   };
 
 

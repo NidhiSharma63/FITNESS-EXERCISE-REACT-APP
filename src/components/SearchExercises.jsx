@@ -15,11 +15,6 @@ function SearchExercises() {
   const [search,setSearch] = useState('');
   const [exercise,setExercise] = useState([]);
   const [bodyPart,setBodyPart] = useState([]);
-  // const.log()
-  // useEffect(()=>{
-  //   setDataType(["hi","AKANSHA","ne","ji","bhar","kr","gu","khaya"]);
-  //   // console.log(TypesArray.length)
-  // },[])
 
   useEffect(()=>{
     const fecthExerciseData = async() =>{

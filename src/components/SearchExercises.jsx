@@ -10,13 +10,13 @@ function SearchExercises() {
   const [exercise,setExercise] = useState([]);
   const [bodyPart,setBodyPart] = useState([]);
 
-  useEffect(()=>{
-    const fecthExerciseData = async() =>{
-      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
-      setBodyPart(['all',...bodyPartsData]);
-    }
-    fecthExerciseData();
-  },[]);
+  // useEffect(()=>{
+  //   const fecthExerciseData = async() =>{
+  //     const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
+  //     setBodyPart(['all',...bodyPartsData]);
+  //   }
+  //   fecthExerciseData();
+  // },[]);
 
   
   const handleSubmit = async(e) =>{

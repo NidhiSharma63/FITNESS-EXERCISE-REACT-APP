@@ -7,7 +7,7 @@ import useStore from '../store';
 const url = 'https://exercisedb.p.rapidapi.com/exercises'
 
 function SearchExercises() {
-  const  {TypesArray,setDataType}  = useStore()
+  const  {TypesArray,setDataType,setShowExercise}  = useStore()
   const [search,setSearch] = useState('');
   const [exercise,setExercise] = useState([]);
   const [bodyPart,setBodyPart] = useState([]);
@@ -21,6 +21,8 @@ function SearchExercises() {
     const fecthExerciseData = async() =>{
       const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
       setDataType(['all',...bodyPartsData]);
+      const exerciseData = await fetchData(url,options);
+      setShowExercise(exerciseData);
     }
     fecthExerciseData();
   },[]);
@@ -38,8 +40,6 @@ function SearchExercises() {
       );
       setSearch('');
       setExercise(searchedExercise);
-      console.log(searchedExercise)
-
     }
 
 

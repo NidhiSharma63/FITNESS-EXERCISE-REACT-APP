@@ -2,7 +2,8 @@ import create from 'zustand';
 import { devtools } from 'zustand/middleware';
 
 const getClickedExercise = (state, exercise)=>{
-  console.log(exercise);
+  // console.log(exercise);
+
 }
 
 const useStore = create(
@@ -10,8 +11,9 @@ const useStore = create(
     set => ({
       TypesArray: [],
       showExerciseArray:[],
-      ClickedExercise: '',
+      ClickedExercise: 'all',
       setDataType:(data)=>{set(state => ({TypesArray: data}))},
+      setShowExercise:(data)=>{set(state => ({showExerciseArray: data}))},
       GetClickedExercise: (exercise) => set(state => (getClickedExercise(state, exercise))),
     }),
   ),

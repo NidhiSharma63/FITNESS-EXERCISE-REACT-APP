@@ -34,7 +34,10 @@ function HorizontalScrollBar() {
   const  TypesArray  = useStore(state => state.TypesArray);
   return (
     <div style={{width:'100%'}}>
-      <ScrollMenu  LeftArrow={LeftArrow} RightArrow={RightArrow} itemClassName="hrizontal" >
+      <ScrollMenu  
+      LeftArrow={LeftArrow} 
+      RightArrow={RightArrow} 
+      itemClassName="hrizontal" >
         {
             TypesArray.length>0 &&
             TypesArray.map((item)=>(
@@ -44,7 +47,10 @@ function HorizontalScrollBar() {
                 itemId={item.id || item}
                 title={item.id || item}
                 m="0 40px">
-                <BodyPart key={item} item={item} className="parts"/>
+                <BodyPart 
+                key={item} 
+                item={item} 
+                className="parts"/>
                </Box>
             ))
         }

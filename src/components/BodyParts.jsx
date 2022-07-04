@@ -14,7 +14,16 @@ const BodyPart = ({item}) =>{
         className="bodyPart-card"
         sx={{ background: '#fff', borderBottomLeftRadius: '20px', width: '270px', height: '282px', cursor: 'pointer', gap: '47px' }}
         onClick={(e) => {
-          GetClickedExercise(e.target.innerText);
+          const keyword = e.target.innerText;
+          const splitArray = keyword.split(' ');
+          const search = splitArray.join(' ');
+          console.log(search.toLowerCase())
+          // const keyword = e.target.innerText
+          //   .split(" ")
+          //   .map((word) => word.toLowerCase())
+          //   .join(" ");
+          GetClickedExercise(search.toLowerCase());
+          // GetClickedExercise(e.target.innerText);
         }}
       >
         <img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }} />

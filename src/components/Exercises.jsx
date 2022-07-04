@@ -11,22 +11,6 @@ function Exercises() {
   const { showExerciseArray,serchExercise } = useStore();
   const [exercise,setExercise] = useState([]);
 
-  // useEffect(() => {
-  //   if(serchExercise){
-  //     setExercise(()=>{
-  //       return showExerciseArray.filter(exercise => (
-  //         exercise.name.toLowerCase().includes(serchExercise) ||
-  //         exercise.target.toLowerCase().includes(serchExercise) ||
-  //         exercise.bodyPart.toLowerCase().includes(serchExercise) ||
-  //         exercise.equipment.toLowerCase().includes(serchExercise)
-  //         ))
-  //     });
-  //   }else{
-      
-  //     setExercise(showExerciseArray);
-  //   }
-  // }, [showExerciseArray,serchExercise]);
-
   useEffect(() => {
     setExercise(showExerciseArray);
     if(serchExercise!==''){

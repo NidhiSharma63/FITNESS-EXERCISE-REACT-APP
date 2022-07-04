@@ -17,13 +17,7 @@ const BodyPart = ({item}) =>{
           const keyword = e.target.innerText;
           const splitArray = keyword.split(' ');
           const search = splitArray.join(' ');
-          console.log(search.toLowerCase())
-          // const keyword = e.target.innerText
-          //   .split(" ")
-          //   .map((word) => word.toLowerCase())
-          //   .join(" ");
           GetClickedExercise(search.toLowerCase());
-          // GetClickedExercise(e.target.innerText);
         }}
       >
         <img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }} />

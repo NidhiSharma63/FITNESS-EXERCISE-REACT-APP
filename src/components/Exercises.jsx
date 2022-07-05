@@ -5,8 +5,6 @@ import {Box,Typography,Stack} from '@mui/material';
 import Pagination from '@mui/material/Pagination';
 import {fetchData,options} from '../utils/FetchData';
 
-
-
 function Exercises() {
   const [index,setIndex] = useState(0)
   const { showExerciseArray,serchExercise } = useStore();

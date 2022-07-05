@@ -17,11 +17,13 @@ const useStore = create(
     set => ({
       TypesArray: [],
       showExerciseArray:[],
-      ClickedExercise: 'all',
+      ClickedExercise: [],
       serchExercise:'',
+
       setDataType:(data)=>{set(state => ({TypesArray: data}))},
       setShowExercise:(data)=>{set(state => ({showExerciseArray: data}))},
-      GetClickedExercise: (search) => set(state => ({serchExercise:search})),
+      GetSearchExercise: (search) => set(state => ({serchExercise:search})),
+      setClickedExercise: (data) => set(state => ({ClickedExercise: data})),
     }),
   ),
 );

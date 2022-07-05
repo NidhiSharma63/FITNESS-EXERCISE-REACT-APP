@@ -27,7 +27,6 @@ function Exercises() {
   
   const itemsPerPage = 12;
   const numberOfPages = Math.ceil(exercise.length / itemsPerPage);
-  console.log(numberOfPages);
   
   const newExercise = Array.from({ length: numberOfPages }, (_, index) => {
     const start = index * itemsPerPage

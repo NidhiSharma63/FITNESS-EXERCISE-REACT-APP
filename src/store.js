@@ -17,13 +17,17 @@ const useStore = create(
     set => ({
       TypesArray: [],
       showExerciseArray:[],
-      ClickedExercise: [],
+      ClickedExerciseArray: [],
       serchExercise:'',
+      ClickedExercise:'',
+      exerciseVideo:[],
 
       setDataType:(data)=>{set(state => ({TypesArray: data}))},
       setShowExercise:(data)=>{set(state => ({showExerciseArray: data}))},
       GetSearchExercise: (search) => set(state => ({serchExercise:search})),
-      setClickedExercise: (data) => set(state => ({ClickedExercise: data})),
+      setClickedExercise: (data) => set(state => ({ClickedExerciseArray: data})),
+      setClickedExerciseName: (name) => set(state => ({ClickedExercise:name})),
+      setExerciseVideo: (data) => set(state => ({exerciseVideo: data})),
     }),
   ),
 );

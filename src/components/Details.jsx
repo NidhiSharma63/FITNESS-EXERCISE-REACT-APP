@@ -7,25 +7,26 @@ import EquipmentImage from '../assets/icon/equipment.png';
 import  useStore  from '../store';
 
 const Detail = ({item}) => {
-  const { bodyPart, gifUrl, name, target, equipment } = item;
-  const extraDetail = [
-    {
-      icon: BodyPartImage,
-      name: bodyPart,
-    },
-    {
-      icon: TargetImage,
-      name: target,
-    },
-    {
-      icon: EquipmentImage,
-      name: equipment,
-    },
-  ];
+  console.log(item)
+  // const { bodyPart, gifUrl, name, target, equipment } = item;
+  // const extraDetail = [
+  //   {
+  //     icon: BodyPartImage,
+  //     name: bodyPart,
+  //   },
+  //   {
+  //     icon: TargetImage,
+  //     name: target,
+  //   },
+  //   {
+  //     icon: EquipmentImage,
+  //     name: equipment,
+  //   },
+  // ];
 
 
   return (
-    <></>
+    <>hh</>
     // <Stack key={uuidv4()} gap="60px" sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
     //   <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
     //   <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>

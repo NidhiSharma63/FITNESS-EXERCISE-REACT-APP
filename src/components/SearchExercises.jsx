@@ -18,15 +18,14 @@ function SearchExercises() {
 
   useEffect(()=>{
     setShowExercise(data)
-    // const fecthExerciseData = async() =>{
-    //   const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
-    //   setDataType([...bodyPartsData,'all']);
-    //   const exerciseData = await fetchData(url,options);
-    //   setShowExercise(exerciseData);
-    //   console.log(exerciseData)
-    // }
-    // fecthExerciseData();
-    // setSearch('')
+    const fecthExerciseData = async() =>{
+      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
+      setDataType([...bodyPartsData,'all']);
+      const exerciseData = await fetchData(url,options);
+      setShowExercise(exerciseData);
+    }
+    fecthExerciseData();
+    setSearch('')
   },[]);
 
   

@@ -5,6 +5,7 @@ import  useStore from '../store';
 
 const BodyPart = ({item}) =>{
   const { GetClickedExercise } = useStore();
+  // console.log(item)
   return(
     <>
       <Stack
@@ -21,7 +22,7 @@ const BodyPart = ({item}) =>{
         }}
       >
         <img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }} />
-        <Typography fontSize="24px" fontWeight="bold" fontFamily="Alegreya" color="#3A1212" textTransform="capitalize"> {item}</Typography>
+        <Typography fontSize="24px" fontWeight="bold" fontFamily="Alegreya" color="#3A1212" textTransform="capitalize"> {item.name}</Typography>
       </Stack>
     </>
   );

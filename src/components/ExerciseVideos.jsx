@@ -3,9 +3,7 @@ import useStore from '../store';
 import { Typography, Box, Stack } from '@mui/material';
 const ExerciseVideos = () => {
   const { exerciseVideo,ClickedExercise } = useStore();
-  // if(!exerciseVideo.length) return null;
   return (
-    // <>this is video</>
     <Box sx={{ marginTop: { lg: '203px', xs: '20px' } }} p="20px">
       <Typography sx={{ fontSize: { lg: '44px', xs: '25px' } }}  color="#000" mb="33px">
         Watch <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>{ClickedExercise}</span> exercise videos

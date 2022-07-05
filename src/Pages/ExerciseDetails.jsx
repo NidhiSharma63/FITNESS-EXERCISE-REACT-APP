@@ -7,30 +7,32 @@ import SimilarExercise from '../components/SimilarExercise';
 import Details from '../components/Details';
 import ExerciseVideos from '../components/ExerciseVideos';
 import useStore from '../store';
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 
 function ExerciseDetails() {
-  const {ClickedExercise,ClickedExerciseArray,setClickedExercise,setExerciseVideo} = useStore();
+  const {ClickedExercise,ClickedExerciseArray,setClickedExercise,setExerciseVideo,setSimiliarTargetExercise,setSimiliarEquipmentExercise} = useStore();
   // console.log(ClickedExerciseArray);
 
   const ID = useParams().id;
   // const ID = '0001';
   useEffect(()=>{
-    // setClickedExercise(dataID)
-    const exerciseDB = `https://exercisedb.p.rapidapi.com/exercises/exercise/${ID}`;
+    const exerciseDB = `https://exercisedb.p.rapidapi.com/exercises/exercise`;
     const youtubeVideos = `https://youtube-search-and-download.p.rapidapi.com/search?query=${ClickedExercise} exercise}}`
 
       const getData = async() =>{
-        const exerciseData = await fetchData(exerciseDB,options);
-        console.log(ClickedExerciseArray);
+        const exerciseData = await fetchData(`${exerciseDB}/${ID}`,options);
         setClickedExercise(exerciseData);
 
-        const youtubeData = await fetchData(youtubeVideos,youtubeOptions);
-        setExerciseVideo(youtubeData.contents);
+        // const youtubeData = await fetchData(youtubeVideos,youtubeOptions);
+        // setExerciseVideo(youtubeData.contents);
+        const targetMuscleExercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/target/abs`, options);
+        setSimiliarTargetExercise(targetMuscleExercisesData);
 
-        const targetMuscleExercisesData = await fetchData(`${exerciseDB}/exercises/target/${exerciseData.target}`, options);
-        console.log(targetMuscleExercisesData);
+        const equimentExercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/equipment/body weight`, options);
+        setSimiliarEquipmentExercise(equimentExercisesData);
       };
     getData();
   },[])
@@ -39,9 +41,10 @@ function ExerciseDetails() {
     <Box>
       {
        ClickedExerciseArray && 
-          <Details item = {ClickedExerciseArray}/>
+          <Details key={uuidv4()} item = {ClickedExerciseArray}/>
       }
       <ExerciseVideos />
+      <SimilarExercise />
     </Box>
   )
 }

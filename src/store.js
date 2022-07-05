@@ -21,6 +21,8 @@ const useStore = create(
       serchExercise:'',
       ClickedExercise:'',
       exerciseVideo:[],
+      SimiliarTargetExercise:[],
+      SimiliarEquipmentExercise:[],
 
       setDataType:(data)=>{set(state => ({TypesArray: data}))},
       setShowExercise:(data)=>{set(state => ({showExerciseArray: data}))},
@@ -28,6 +30,8 @@ const useStore = create(
       setClickedExercise: (data) => set(state => ({ClickedExerciseArray: data})),
       setClickedExerciseName: (name) => set(state => ({ClickedExercise:name})),
       setExerciseVideo: (data) => set(state => ({exerciseVideo: data})),
+      setSimiliarTargetExercise: (data) => set(state => ({SimiliarTargetExercise: data})),
+      setSimiliarEquipmentExercise: (data) => set(state => ({SimiliarEquipmentExercise: data})),
     }),
   ),
 );

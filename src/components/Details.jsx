@@ -1,17 +1,13 @@
 import React from 'react';
 import { Typography, Stack, Button } from '@mui/material';
-
+import { v4 as uuidv4 } from 'uuid';
 import BodyPartImage from '../assets/icon/body-part.png';
 import TargetImage from '../assets/icon/target.png';
 import EquipmentImage from '../assets/icon/equipment.png';
 import  useStore  from '../store';
 
 const Detail = ({item}) => {
-  const {ClickedExercise}= useStore();
-
   const { bodyPart, gifUrl, name, target, equipment } = item;
-  console.log(gifUrl)
-
   const extraDetail = [
     {
       icon: BodyPartImage,
@@ -29,7 +25,7 @@ const Detail = ({item}) => {
 
 
   return (
-    <Stack gap="60px" sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
+    <Stack key={uuidv4()} gap="60px" sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>
         <Typography sx={{ fontSize: { lg: '64px', xs: '30px' } }} fontWeight={700} textTransform="capitalize">

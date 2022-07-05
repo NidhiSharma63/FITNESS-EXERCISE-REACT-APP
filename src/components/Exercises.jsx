@@ -3,25 +3,25 @@ import ExerciseCard from './ExerciseCard';
 import useStore from '../store';
 import {Box,Typography,Stack} from '@mui/material';
 import Pagination from '@mui/material/Pagination';
-import SearchExercises from './SearchExercises';
+import {fetchData,options} from '../utils/FetchData';
+
 
 
 function Exercises() {
   const [index,setIndex] = useState(0)
   const { showExerciseArray,serchExercise } = useStore();
   const [exercise,setExercise] = useState([]);
-
   useEffect(() => {
-    setExercise(showExerciseArray);
-    if(serchExercise!==''){
-      setExercise((prev)=>
-        prev=showExerciseArray.filter(exercise => (
-        exercise.name.toLowerCase().includes(serchExercise) ||
-        exercise.target.toLowerCase().includes(serchExercise) ||
-        exercise.bodyPart.toLowerCase().includes(serchExercise) ||
-        exercise.equipment.toLowerCase().includes(serchExercise)
-        ))
-      )
+    if(serchExercise!=='' && serchExercise!=='all'){
+      const getData = async() =>{
+        const bodyPartData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${serchExercise}`,options);
+        setExercise(bodyPartData);
+      }
+      getData();
+    }else if(serchExercise==='all'){
+      setExercise(showExerciseArray);
+    }else{
+      setExercise(showExerciseArray);
     }
   }, [showExerciseArray,serchExercise]);
 
@@ -29,6 +29,7 @@ function Exercises() {
   
   const itemsPerPage = 12;
   const numberOfPages = Math.ceil(exercise.length / itemsPerPage);
+  console.log(numberOfPages);
   
   const newExercise = Array.from({ length: numberOfPages }, (_, index) => {
     const start = index * itemsPerPage
@@ -62,6 +63,8 @@ function Exercises() {
             <ExerciseCard key={idx} exercise={exercise} />
           ))
         }
+        {numberOfPages>1 &&
+        
         <Pagination 
         defaultPage={1}  
         count={numberOfPages-1} 
@@ -70,9 +73,19 @@ function Exercises() {
         shape="rounded"
         pages={index}
         onChange={paginate} />
+        }
       </Stack>
     </Box>
   )
 }
 
 export default Exercises
+
+// / setExercise((prev)=>
+      //   prev=showExerciseArray.filter(exercise => (
+      //   exercise.name.toLowerCase().includes(serchExercise) ||
+      //   exercise.target.toLowerCase().includes(serchExercise) ||
+      //   exercise.bodyPart.toLowerCase().includes(serchExercise) ||
+      //   exercise.equipment.toLowerCase().includes(serchExercise)
+      //   ))
+      // )

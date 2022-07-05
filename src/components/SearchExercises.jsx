@@ -13,17 +13,16 @@ function SearchExercises() {
   setShowExercise,
   GetClickedExercise}  = useStore()
   const [search,setSearch] = useState('');
-  const [exercise,setExercise] = useState([]);
-  const [bodyPart,setBodyPart] = useState([]);
 
   useEffect(()=>{
     const fecthExerciseData = async() =>{
       const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
-      setDataType(['all',...bodyPartsData]);
+      setDataType([...bodyPartsData,'all']);
       const exerciseData = await fetchData(url,options);
       setShowExercise(exerciseData);
     }
     fecthExerciseData();
+    setSearch('')
   },[]);
 
   
@@ -32,8 +31,6 @@ function SearchExercises() {
     if(search){
       GetClickedExercise(search);
     }
-
-
   }
   return (
     

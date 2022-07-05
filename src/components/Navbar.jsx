@@ -38,7 +38,11 @@ function Navbar() {
         <Link to='/home' style={homeLink}>
           Home
         </Link>
-        <a href="#exercise" style={link}>Exercises</a>
+        <a href="#exercise" style={link}
+          onClick={()=>{
+            console.log('clicked')
+            window.scrollTo({ top:1600, behavior: 'smooth' });
+          }}>Exercises</a>
       </Stack>
     </Stack>
   )

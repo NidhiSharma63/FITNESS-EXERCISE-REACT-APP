@@ -12,33 +12,34 @@ import useStore from '../store';
 
 function ExerciseDetails() {
   const {ClickedExercise,ClickedExerciseArray,setClickedExercise,setExerciseVideo} = useStore();
-  console.log(ClickedExercise);
+  // console.log(ClickedExerciseArray);
 
-  // const ID = useParams().id;
-  const ID = '0001';
+  const ID = useParams().id;
+  // const ID = '0001';
   useEffect(()=>{
-    setClickedExercise(dataID)
-  //   const exerciseDB = `https://exercisedb.p.rapidapi.com/exercises/exercise/${ID}`;
-  //   // console.log(exerciseDB);
-  //   const getData = async() =>{
-  //     const exerciseData = await fetchData(exerciseDB,options);
-  //     console.log(exerciseData);
-  //   }
-      const youtubeVideos = `https://youtube-search-and-download.p.rapidapi.com/search?query=${ClickedExercise} exercise}}`
-      const getYoutubeVideos = async() =>{
+    // setClickedExercise(dataID)
+    const exerciseDB = `https://exercisedb.p.rapidapi.com/exercises/exercise/${ID}`;
+    const youtubeVideos = `https://youtube-search-and-download.p.rapidapi.com/search?query=${ClickedExercise} exercise}}`
+
+      const getData = async() =>{
+        const exerciseData = await fetchData(exerciseDB,options);
+        console.log(ClickedExerciseArray);
+        setClickedExercise(exerciseData);
+
         const youtubeData = await fetchData(youtubeVideos,youtubeOptions);
         setExerciseVideo(youtubeData.contents);
-      }
-      getYoutubeVideos();
-  //   getData();
+
+        const targetMuscleExercisesData = await fetchData(`${exerciseDB}/exercises/target/${exerciseData.target}`, options);
+        console.log(targetMuscleExercisesData);
+      };
+    getData();
   },[])
   return (
 
     <Box>
       {
-        ClickedExerciseArray.length>0 && ClickedExerciseArray.map((item,index)=>
-          <Details key={index} {...item}/>
-          )
+       ClickedExerciseArray && 
+          <Details item = {ClickedExerciseArray}/>
       }
       <ExerciseVideos />
     </Box>

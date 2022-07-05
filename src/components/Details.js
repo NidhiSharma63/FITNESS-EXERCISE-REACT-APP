@@ -6,9 +6,11 @@ import TargetImage from '../assets/icon/target.png';
 import EquipmentImage from '../assets/icon/equipment.png';
 import  useStore  from '../store';
 
-const Detail = (item) => {
+const Detail = ({item}) => {
   const {ClickedExercise}= useStore();
+
   const { bodyPart, gifUrl, name, target, equipment } = item;
+  console.log(gifUrl)
 
   const extraDetail = [
     {

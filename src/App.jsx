@@ -19,7 +19,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/exercise/:id' element={<ExerciseDetails/>}/>
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
       </Box>
     </Router>
   )

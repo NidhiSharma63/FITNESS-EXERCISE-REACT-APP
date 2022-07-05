@@ -26,8 +26,8 @@ function ExerciseDetails() {
         const exerciseData = await fetchData(`${exerciseDB}/${ID}`,options);
         setClickedExercise(exerciseData);
 
-        // const youtubeData = await fetchData(youtubeVideos,youtubeOptions);
-        // setExerciseVideo(youtubeData.contents);
+        const youtubeData = await fetchData(youtubeVideos,youtubeOptions);
+        setExerciseVideo(youtubeData.contents);
         const targetMuscleExercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/target/abs`, options);
         setSimiliarTargetExercise(targetMuscleExercisesData);
 

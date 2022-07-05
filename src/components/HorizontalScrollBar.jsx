@@ -30,8 +30,8 @@ const LeftArrow = () => {
 
 
 
-function HorizontalScrollBar() {
-  const  TypesArray  = useStore(state => state.TypesArray);
+function HorizontalScrollBar({Array}) {
+  // const  Array  = useStore(state => tate.Array);
   return (
     <div style={{width:'100%'}}>
       <ScrollMenu  
@@ -39,8 +39,8 @@ function HorizontalScrollBar() {
       RightArrow={RightArrow} 
       itemClassName="hrizontal" >
         {
-            TypesArray.length>0 &&
-            TypesArray.map((item)=>(
+            Array.length>0 &&
+            Array.map((item)=>(
                <Box
                 className="bodyPart-card"
                 key={item.id || item}
@@ -60,19 +60,3 @@ function HorizontalScrollBar() {
 }
 
 export default HorizontalScrollBar;
-
-{/* <Stack
-key={item}
-type="button"
-alignItems="center"
-justifyContent="center"
-className="bodyPart-card"
-// sx={bodyPart === item ? { borderTop: '4px solid #FF2625', background: '#fff', borderBottomLeftRadius: '20px', width: '270px', height: '282px', cursor: 'pointer', gap: '47px' } : { background: '#fff', borderBottomLeftRadius: '20px', width: '270px', height: '282px', cursor: 'pointer', gap: '47px' }}
-onClick={() => {
-// setBodyPart(item);
-window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
-}}
->
-<img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }} />
-<Typography fontSize="24px" fontWeight="bold" fontFamily="Alegreya" color="#3A1212" textTransform="capitalize"> {item}</Typography>
-</Stack> */}

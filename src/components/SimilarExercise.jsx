@@ -6,6 +6,9 @@ import Loader from './Loader';
 
 const SimilarExercises = () => {
   const { SimiliarTargetExercise,SimiliarEquipmentExercise } = useStore();
+  if(!SimiliarTargetExercise.length) return <Loader/>
+  if(!SimiliarEquipmentExercise.length) return <Loader/>
+
   return (
     <Box 
       sx={{ 

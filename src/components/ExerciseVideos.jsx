@@ -1,8 +1,12 @@
 import React from 'react';
 import useStore from '../store';
 import { Typography, Box, Stack } from '@mui/material';
+import Loader from './Loader';
+
 const ExerciseVideos = () => {
   const { exerciseVideo,ClickedExercise } = useStore();
+  if(!exerciseVideo.length) return <Loader/>
+
   return (
     <Box 
       sx={{ 

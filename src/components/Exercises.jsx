@@ -4,6 +4,7 @@ import useStore from '../store';
 import {Box,Typography,Stack} from '@mui/material';
 import Pagination from '@mui/material/Pagination';
 import {fetchData,options} from '../utils/FetchData';
+import Loader from './Loader';
 
 function Exercises() {
   const [index,setIndex] = useState(0)
@@ -39,7 +40,7 @@ function Exercises() {
     window.scrollTo({ top: 1600, behavior: 'smooth' });
   };
 
-
+  if(!exercise.length) return <Loader/>
   return (
     <Box 
     id="exercises" 

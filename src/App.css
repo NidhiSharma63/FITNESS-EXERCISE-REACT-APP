@@ -41,7 +41,9 @@ body {
     height: 445px;
     background: #fff;
     border-top: 4px solid #FF2625;
-    border-bottom-left-radius: 20px;
+    /* box-shadow: 0px 1px 7px -3px rgb(92, 78, 78); */
+    box-shadow: 0px 1px 7px -3px #c499a2;
+    border-radius: 4px;
     text-decoration: none;
     display: flex;
     justify-content: space-between;

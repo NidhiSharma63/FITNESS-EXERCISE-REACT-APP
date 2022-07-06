@@ -48,7 +48,9 @@ function SearchExercises() {
         fontWeight='700'>
         Awesome Exercises you <br/>should know
       </Typography>
-      <Box position="relative">
+      <Box 
+        position="relative"
+        mb='20px'>
         <TextField 
           value={search}
           placeholder="search exercises"

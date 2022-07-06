@@ -9,22 +9,22 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 
 const Footer = () => (
   <Box mt="80px" bgcolor="#FFF3F4" p='20px 10px'>
-    <Box sx={{border:'1px solid red'}}>
-      <Stack>
+    <Box sx={{border:'1px solid red'}} display='flex' justifyContent='space-between'>
+      <Stack border='1px solid orange' display='flex' justifyContent='space-around'>
         <img src={Logo} alt="logo" style={{ width: '200px', height: '41px' }}/>
         <Typography>
-          <CopyrightIcon/>2024.All Rights Reserved.
+          <CopyrightIcon fontSize='10px'/>2024.All Rights Reserved.
         </Typography>
       </Stack>
-      <Box>
-        <Typography fontSize="24px" fontWeight="bold" fontFamily="Alegreya" color="#3A1212" textTransform="capitalize">Contact us:</Typography>
-        <Stack>
-          <Box component='span'> <TwitterIcon/><InstagramIcon/></Box>
-          <Typography fontSize="24px" fontWeight="bold" fontFamily="Alegreya" color="#3A1212" textTransform="capitalize"><EmailIcon/>:goldsgym@gmail.com</Typography>
-          <Typography fontSize="24px" fontWeight="bold" fontFamily="Alegreya" color="#3A1212" textTransform="capitalize"><LocalPhoneIcon/>:+1-844-867-5309</Typography>
+      <Box display='flex'>
+        <Typography alignSelf='center' fontSize="22px"  fontFamily="Alegreya" color="#3A1212" textTransform="capitalize">Contact us:</Typography>
+        <Stack  pl='10px'>
+          <Box component='span' mb='5px'> <TwitterIcon/><InstagramIcon/></Box>
+          <Typography fontSize="20px" mb='5px'  fontFamily="Alegreya" color="#3A1212" textTransform="capitalize"><EmailIcon/>:goldsgym@gmail.com</Typography>
+          <Typography fontSize="20px" mb='5px'  fontFamily="Alegreya" color="#3A1212" textTransform="capitalize"><LocalPhoneIcon/>:+1-844-867-5309</Typography>
         </Stack>
       </Box>
-      <Stack><Typography>Terms & Conditions | privacy policy</Typography></Stack>
+      <Stack sx={{display:'flex',alignItems:'center',justifyContent:'center'}}><Typography>Terms & Conditions | privacy policy</Typography></Stack>
     </Box>
     {/* <Stack gap="40px" sx={{ alignItems: 'center' }} flexWrap="wrap" px="40px" pt="24px">
       <img src={Logo} alt="logo" style={{ width: '200px', height: '41px' }} />

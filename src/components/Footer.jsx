@@ -63,7 +63,7 @@ const Footer = () => (
        alignItems:'center',
        justifyContent:'center', 
        flexWrap:'wrap'}}
-     ><Typography 
+      ><Typography 
         fontFamily='Hahmlet'
       >Terms & Conditions | privacy policy</Typography></Stack>
     </Box>

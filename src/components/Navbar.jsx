@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {Stack} from '@mui/material';
 import Logo from '../assets/images/Logo.png'
@@ -20,6 +20,10 @@ const homeLink = {
 }
 
 function Navbar() {
+  const [isActive, setIsActive] = React.useState(false);
+  useEffect(() => {
+    setIsActive(true)
+  },[])
   return (
     <Stack
       direction="row"
@@ -35,12 +39,11 @@ function Navbar() {
         fontSize="24px"
         gap="40px"
         alignItems="flex-end">
-        <Link to='/home' style={homeLink}>
+        <Link to='/' style={homeLink}>
           Home
         </Link>
         <a href="#exercise" style={link}
           onClick={()=>{
-            console.log('clicked')
             window.scrollTo({ top:1600, behavior: 'smooth' });
           }}>Exercises</a>
       </Stack>

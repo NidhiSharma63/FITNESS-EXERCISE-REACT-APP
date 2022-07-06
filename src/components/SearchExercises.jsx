@@ -3,6 +3,7 @@ import {Button,Stack,Typography,Box,TextField} from '@mui/material';
 import {fetchData,options} from '../utils/FetchData';
 import HorizontalScrollBar from './HorizontalScrollBar';
 import useStore from '../store';
+import { InputLabel } from '@mui/material';
 
 const url = 'https://exercisedb.p.rapidapi.com/exercises'
 
@@ -15,13 +16,13 @@ function SearchExercises() {
   const [search,setSearch] = useState('');
 
   useEffect(()=>{
-    // const fecthExerciseData = async() =>{
-    //   const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
-    //   setDataType([...bodyPartsData,'all']);
-    //   const exerciseData = await fetchData(url,options);
-    //   setShowExercise(exerciseData);
-    // }
-    // fecthExerciseData();
+    const fecthExerciseData = async() =>{
+      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
+      setDataType([...bodyPartsData,'all']);
+      const exerciseData = await fetchData(url,options);
+      setShowExercise(exerciseData);
+    }
+    fecthExerciseData();
     setSearch('')
   },[]);
 
@@ -54,7 +55,9 @@ function SearchExercises() {
           onChange={(e)=>setSearch(e.target.value.toLowerCase())}
           type="text"
           outline="none"
+          variant='outlined'
           sx={{
+            border:'none',
             input:{
                 height:"24.5px",
                 fontSize:'20px',
@@ -91,7 +94,7 @@ function SearchExercises() {
           onClick={handleSubmit}>Search
         </Button>
       </Box>
-        {/* <HorizontalScrollBar Array={TypesArray}/> */}
+        <HorizontalScrollBar Array={TypesArray}/>
     </Stack>
   )
 }

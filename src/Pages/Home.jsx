@@ -11,8 +11,8 @@ function Home() {
   return (
     <Box>
       <HeroBanner/>
-      <SearchExercises/>
-      <Exercises/>
+      {/* <SearchExercises/> */}
+      {/* <Exercises/> */}
     </Box>
   )
 }

@@ -12,11 +12,17 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 function ExerciseDetails() {
-  const {ClickedExercise,ClickedExerciseArray,setClickedExercise,setExerciseVideo,setSimiliarTargetExercise,setSimiliarEquipmentExercise} = useStore();
-  // console.log(ClickedExerciseArray);
+  const {
+    ClickedExercise,
+    ClickedExerciseArray,
+    setClickedExercise,
+    setExerciseVideo,
+    setSimiliarTargetExercise,
+    setSimiliarEquipmentExercise
+  } = useStore();
+
 
   const ID = useParams().id;
-  // const ID = '0001';
   useEffect(()=>{
     const exerciseDB = `https://exercisedb.p.rapidapi.com/exercises/exercise`;
     const youtubeVideos = `https://youtube-search-and-download.p.rapidapi.com/search?query=${ClickedExercise} exercise}}`

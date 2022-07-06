@@ -33,11 +33,12 @@ const BodyPart = ({item}) =>{
         style={{ width: '40px', height: '40px' }} />
         <Typography 
           fontSize="24px" 
-          fontWeight="bold" 
           fontFamily="Alegreya" 
           color="#3A1212" 
           textTransform="capitalize"
           ref={pElem}
+          textAlign="center"
+          p='5px'
           > {(typeof item)==='string'?item:item.name}</Typography>
       </Stack>
     </>

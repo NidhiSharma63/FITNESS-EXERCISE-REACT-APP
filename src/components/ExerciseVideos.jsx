@@ -5,7 +5,8 @@ import Loader from './Loader';
 
 const ExerciseVideos = () => {
   const { exerciseVideo,ClickedExercise } = useStore();
-  if(!exerciseVideo.length) return <Loader/>
+  // if(!exerciseVideo.length) return <Loader/>
+  console.log(exerciseVideo)
 
   return (
     <Box 

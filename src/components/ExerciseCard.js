@@ -41,6 +41,7 @@ const ExerciseCard = ({ exercise }) => {
         </Stack>
         <Typography 
           ml="21px" 
+          fontFamily='Hahmlet'
           color="#000" 
           sx={{ fontSize: { lg: '24px', xs: '20px' } }} 
           mt="11px" pb="10px" 

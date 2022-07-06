@@ -15,13 +15,13 @@ function SearchExercises() {
   const [search,setSearch] = useState('');
 
   useEffect(()=>{
-    const fecthExerciseData = async() =>{
-      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
-      setDataType([...bodyPartsData,'all']);
-      const exerciseData = await fetchData(url,options);
-      setShowExercise(exerciseData);
-    }
-    fecthExerciseData();
+    // const fecthExerciseData = async() =>{
+    //   const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
+    //   setDataType([...bodyPartsData,'all']);
+    //   const exerciseData = await fetchData(url,options);
+    //   setShowExercise(exerciseData);
+    // }
+    // fecthExerciseData();
     setSearch('')
   },[]);
 
@@ -42,6 +42,7 @@ function SearchExercises() {
       <Typography 
         textAlign='center' 
         mb='50px' 
+        fontFamily='Hahmlet'
         sx={{fontSize:{lg:'44px',xs:'30px'}}} 
         fontWeight='700'>
         Awesome Exercises you <br/>should know
@@ -52,13 +53,14 @@ function SearchExercises() {
           placeholder="search exercises"
           onChange={(e)=>setSearch(e.target.value.toLowerCase())}
           type="text"
-          height="76px"
           outline="none"
           sx={{
-              input:{
+            input:{
+                height:"24.5px",
                 fontSize:'20px',
                 border:'none',
                 borderRadius:'4px',
+                fontFamily:'Hahmlet'
               },
               width:{
                 lg:'800px',
@@ -75,6 +77,7 @@ function SearchExercises() {
               lg:'20px',
               xs:'14px'
             },
+            fontFamily:'Hahmlet',
             color:'#fff',
             bgcolor:'#FF2625',
             position:'absolute',
@@ -88,7 +91,7 @@ function SearchExercises() {
           onClick={handleSubmit}>Search
         </Button>
       </Box>
-        <HorizontalScrollBar Array={TypesArray}/>
+        {/* <HorizontalScrollBar Array={TypesArray}/> */}
     </Stack>
   )
 }

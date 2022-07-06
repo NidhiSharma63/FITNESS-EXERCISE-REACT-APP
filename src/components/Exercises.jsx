@@ -46,8 +46,8 @@ function Exercises() {
     sx={{ mt: { lg: '109px' } }}
       mt="50px" p="20px">
       <Typography 
-      variant="h4" 
-      fontWeight="bold" 
+      variant="h4"
+      fontFamily='Hahmlet'
       sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
       Showing Results</Typography>
       <Stack 

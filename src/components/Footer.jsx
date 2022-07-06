@@ -20,10 +20,13 @@ const Footer = () => (
         <img src={Logo} alt="logo" 
           style={{ width: '180px', height: '41px' }}/>
         <Box sx={{mt:{xs:'10px',sm:'0px'}}}>
-          <Typography>
+          <Typography
+            fontFamily='Hahmlet'
+            >
             <CopyrightIcon fontSize='10px'/>2024.All Rights Reserved.
           </Typography>
-          <Typography 
+          <Typography
+            fontFamily='Hahmlet'
            sx={{display:{md:'none',sm:'flex',xs:'none'}}}
           >Terms & Conditions | privacy policy</Typography>
         </Box>
@@ -33,20 +36,24 @@ const Footer = () => (
         sx={{flexDirection:{sm:'column',md:'row'},
         mt:{xs:'20px',sm:'0px'}}}>
         <Typography 
+        
           sx={{alignSelf:{sm:'flex-start',md:'center',xs:'center'}}}
           fontSize="22px"  
-          fontFamily="Alegreya" 
+          fontFamily='Hahmlet'
+ 
           color="#3A1212" 
           textTransform="capitalize">Contact us:</Typography>
         <Stack  pl='10px' spacing={.5}>
           <Box component='span'> <TwitterIcon/><InstagramIcon/></Box>
           <Typography 
             fontSize="20px"  
-            fontFamily="Alegreya" 
+            fontFamily='Hahmlet'
+ 
             color="#3A1212"><EmailIcon/>:goldsgym@gmail.com</Typography>
           <Typography 
             fontSize="20px"  
-            fontFamily="Alegreya" 
+            fontFamily='Hahmlet'
+ 
             color="#3A1212"><LocalPhoneIcon/>:+1-844-867-5309</Typography>
         </Stack>
       </Box>
@@ -56,7 +63,9 @@ const Footer = () => (
        alignItems:'center',
        justifyContent:'center', 
        flexWrap:'wrap'}}
-     ><Typography >Terms & Conditions | privacy policy</Typography></Stack>
+     ><Typography 
+        fontFamily='Hahmlet'
+      >Terms & Conditions | privacy policy</Typography></Stack>
     </Box>
   </Box>
 );

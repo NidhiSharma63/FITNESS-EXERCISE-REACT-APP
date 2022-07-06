@@ -1,14 +1,11 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import { Stack, Typography } from '@mui/material';
 import Icon from '../assets/icon/gym.png';
 import  useStore from '../store';
 
 const BodyPart = ({item}) =>{
-  const { GetClickedExercise } = useStore();
-  if((typeof item)==='string'){
-    console.log(item)
-
-  }
+  const { GetSearchExercise } = useStore();
+  const pElem = useRef(null);
   return(
     <>
       <Stack
@@ -25,10 +22,10 @@ const BodyPart = ({item}) =>{
           gap: '47px' 
         }}
         onClick={(e) => {
-          const keyword = e.target.innerText;
+          const keyword = pElem.current.innerText;
           const splitArray = keyword.split(' ');
           const search = splitArray.join(' ');
-          GetClickedExercise(search.toLowerCase());
+          GetSearchExercise(search.toLowerCase());
         }}
       >
         <img 
@@ -40,6 +37,7 @@ const BodyPart = ({item}) =>{
           fontFamily="Alegreya" 
           color="#3A1212" 
           textTransform="capitalize"
+          ref={pElem}
           > {(typeof item)==='string'?item:item.name}</Typography>
       </Stack>
     </>

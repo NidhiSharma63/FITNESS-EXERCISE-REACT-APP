@@ -9,6 +9,7 @@ function Exercises() {
   const [index,setIndex] = useState(0)
   const { showExerciseArray,serchExercise } = useStore();
   const [exercise,setExercise] = useState([]);
+  console.log(serchExercise)
   useEffect(() => {
     if(serchExercise!=='' && serchExercise!=='all'){
       const getData = async() =>{
@@ -17,7 +18,7 @@ function Exercises() {
       }
       getData();
     }else if(serchExercise==='all'){
-      setExercise(showExerciseArray);
+      setExercise(showExerciseArray); 
     }else{
       setExercise(showExerciseArray);
     }

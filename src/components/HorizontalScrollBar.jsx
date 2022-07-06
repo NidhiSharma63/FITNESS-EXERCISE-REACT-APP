@@ -31,8 +31,6 @@ const LeftArrow = () => {
 
 
 function HorizontalScrollBar({Array}) {
-  // const  Array  = useStore(state => tate.Array);
-  // console.log(Array.length)
   return (
     <div style={{width:'100%'}}>
       <ScrollMenu  

@@ -37,12 +37,16 @@ function SearchExercises() {
   }
   return (
     
-    <Stack alignItems="center" mt={10} justifyContent="center" p="20px">
+    <Stack 
+      alignItems="center" 
+      mt={10} 
+      justifyContent="center" 
+      p="20px">
       <Typography 
-      textAlign='center' 
-      mb='50px' 
-      sx={{fontSize:{lg:'44px',xs:'30px'}}} 
-      fontWeight='700'>
+        textAlign='center' 
+        mb='50px' 
+        sx={{fontSize:{lg:'44px',xs:'30px'}}} 
+        fontWeight='700'>
         Awesome Exercises you <br/>should know
       </Typography>
       <Box position="relative">

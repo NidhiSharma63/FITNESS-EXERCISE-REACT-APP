@@ -76,13 +76,4 @@ function Exercises() {
   )
 }
 
-export default Exercises
-
-// / setExercise((prev)=>
-      //   prev=showExerciseArray.filter(exercise => (
-      //   exercise.name.toLowerCase().includes(serchExercise) ||
-      //   exercise.target.toLowerCase().includes(serchExercise) ||
-      //   exercise.bodyPart.toLowerCase().includes(serchExercise) ||
-      //   exercise.equipment.toLowerCase().includes(serchExercise)
-      //   ))
-      // )
+export default Exercises;

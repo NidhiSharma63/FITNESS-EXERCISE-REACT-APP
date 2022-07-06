@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import useStore from '../store';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import { Box, Typography,Stack } from '@mui/material';
 import RightArrowIcon from '../assets/icon/right-arrow.png';
@@ -32,7 +31,7 @@ const LeftArrow = () => {
 
 function HorizontalScrollBar({Array}) {
   return (
-    <div style={{width:'100%'}}>
+    <div style={{width:'100%',overflow:'auto'}}>
       <ScrollMenu  
       LeftArrow={LeftArrow} 
       RightArrow={RightArrow} 

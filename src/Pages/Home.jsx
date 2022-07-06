@@ -10,9 +10,9 @@ import Exercises from '../components/Exercises';
 function Home() {
   return (
     <Box>
-      <HeroBanner/>
-      <SearchExercises/>
-      <Exercises/>
+      {/* <HeroBanner/> */}
+      {/* <SearchExercises/> */}
+      {/* <Exercises/> */}
     </Box>
   )
 }

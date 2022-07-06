@@ -14,7 +14,7 @@ const Footer = () => (
         <img src={Logo} alt="logo" style={{ width: '200px', height: '41px' }}/>
         <Box>
           <Typography><CopyrightIcon fontSize='10px'/>2024.All Rights Reserved.</Typography>
-          <Typography sx={{display:{md:'none',xs:'flex'}}}>Terms & Conditions | privacy policy</Typography>
+          <Typography sx={{display:{md:'none',sm:'flex',xs:'none'}}}>Terms & Conditions | privacy policy</Typography>
         </Box>
 
       </Stack>
@@ -32,7 +32,7 @@ const Footer = () => (
         </Stack>
       </Box>
       <Stack 
-       sx={{display:{md:'flex',xs:'none'},alignItems:'center',justifyContent:'center', flexWrap:'wrap'}}
+       sx={{display:{md:'flex',sm:'none'},alignItems:'center',justifyContent:'center', flexWrap:'wrap'}}
      ><Typography >Terms & Conditions | privacy policy</Typography></Stack>
     </Box>
   </Box>

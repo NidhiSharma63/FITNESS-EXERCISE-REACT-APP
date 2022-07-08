@@ -8,7 +8,10 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
 const Footer = () => (
-  <Box mt="80px" bgcolor="#FFF3F4" p='20px 10px'>
+  <Box
+    mt="80px" 
+    bgcolor="var(--footer-bg-color)" 
+    p='20px 10px'>
     <Box 
       sx={{flexDirection:{sm:'row',xs:'column'}}} 
       display='flex' 
@@ -22,12 +25,14 @@ const Footer = () => (
         <Box sx={{mt:{xs:'10px',sm:'0px'}}}>
           <Typography
             fontFamily='Hahmlet'
+            color='var(--secondary-color)'
             >
             <CopyrightIcon fontSize='10px'/>2024.All Rights Reserved.
           </Typography>
           <Typography
             fontFamily='Hahmlet'
-           sx={{display:{md:'none',sm:'flex',xs:'none'}}}
+            color='var(--secondary-color)'
+            sx={{display:{md:'none',sm:'flex',xs:'none'}}}
           >Terms & Conditions | privacy policy</Typography>
         </Box>
       </Stack>
@@ -36,25 +41,25 @@ const Footer = () => (
         sx={{flexDirection:{sm:'column',md:'row'},
         mt:{xs:'20px',sm:'0px'}}}>
         <Typography 
-        
+          color='var(--secondary-color)'
           sx={{alignSelf:{sm:'flex-start',md:'center',xs:'center'}}}
           fontSize="22px"  
           fontFamily='Hahmlet'
- 
-          color="#3A1212" 
           textTransform="capitalize">Contact us:</Typography>
         <Stack  pl='10px' spacing={.5}>
-          <Box component='span'> <TwitterIcon/><InstagramIcon/></Box>
+          <Box component='span' 
+            color='var(--secondary-color)'
+            > <TwitterIcon/><InstagramIcon/></Box>
           <Typography 
             fontSize="20px"  
             fontFamily='Hahmlet'
- 
-            color="#3A1212"><EmailIcon/>:goldsgym@gmail.com</Typography>
+            color='var(--secondary-color)'
+            ><EmailIcon/>:goldsgym@gmail.com</Typography>
           <Typography 
             fontSize="20px"  
             fontFamily='Hahmlet'
- 
-            color="#3A1212"><LocalPhoneIcon/>:+1-844-867-5309</Typography>
+            color='var(--secondary-color)'
+            ><LocalPhoneIcon/>:+1-844-867-5309</Typography>
         </Stack>
       </Box>
       <Stack 
@@ -64,6 +69,7 @@ const Footer = () => (
        justifyContent:'center', 
        flexWrap:'wrap'}}
       ><Typography 
+        color='var(--secondary-color)'
         fontFamily='Hahmlet'
       >Terms & Conditions | privacy policy</Typography></Stack>
     </Box>

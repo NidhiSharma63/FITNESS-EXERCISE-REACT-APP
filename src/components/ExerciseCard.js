@@ -16,7 +16,7 @@ const ExerciseCard = ({ exercise }) => {
           src={exercise.gifUrl} 
           alt={exercise.name} 
           loading="lazy" />
-        <Stack direction="row">
+        <Stack direction="row" mt='12px'>
           <Button 
           sx={{ 
             ml: '21px', 

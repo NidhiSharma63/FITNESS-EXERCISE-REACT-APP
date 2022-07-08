@@ -12,7 +12,7 @@ function HeroBanner() {
           <Typography 
           
             fontSize="36px" 
-            color="#d50000"
+            color="var(--primary-color)"
             fontFamily='Hahmlet'
             mb={3}>
               Fitness Club
@@ -20,6 +20,7 @@ function HeroBanner() {
           <Typography 
             fontWeight={700}
             fontFamily='Hahmlet'
+            color='var(--secondary-color)'
             sx={{
               fontSize:{lg:'44px',xs:'40px'}
             }}>
@@ -28,7 +29,8 @@ function HeroBanner() {
           </Typography>
           <Typography 
             fontSize={'22px'} 
-            lineHeight={'45px'}  
+            lineHeight={'45px'} 
+            color='var(--secondary-color)' 
             mb={3}>
               check the most effective exercises
           </Typography>
@@ -38,7 +40,7 @@ function HeroBanner() {
             href="#exercises">Explore Exercise</Button>
           <Typography 
             fontWeight={600} 
-            color="#ff2625" 
+            color="var(--accent-color)" 
             sx={{
               opacity:0.1,display:{lg:'block',xs:'none'}
             }} fontSize="200px">

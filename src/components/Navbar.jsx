@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import {Stack} from '@mui/material';
+import {Stack,Button} from '@mui/material';
 import Logo from '../assets/images/Logo.png'
 
 const style= {
@@ -11,7 +11,7 @@ const style= {
 
 const link = {
   textDecoration:'none',
-  color:'#3A1212'
+  color:'var(--secondary-color)'
 }
 
 const homeLink = {
@@ -20,10 +20,17 @@ const homeLink = {
 }
 
 function Navbar() {
-  const [isActive, setIsActive] = React.useState(false);
-  useEffect(() => {
-    setIsActive(true)
-  },[])
+  const [theme, setTheme] = React.useState('light');
+
+  useEffect(()=>{
+    document.body.classList.add('light');
+  },[]);
+
+  const changeTheme = () =>{
+    const body = document.querySelector('body');
+    body.className==='light' ? body.classList.add('Dark') : body.classList.remove('Dark');
+  }
+
   return (
     <Stack
       direction="row"
@@ -42,7 +49,10 @@ function Navbar() {
         <Link to='/' style={homeLink}>
           Home
         </Link>
-        <a href="#exercise" style={link}
+        <Button
+         onClick={()=>changeTheme()}>dark</Button>
+        <a href="#exercise" 
+          style={link}
           onClick={()=>{
             window.scrollTo({ top:1600, behavior: 'smooth' });
           }}>Exercises</a>

@@ -10,7 +10,6 @@ function Exercises() {
   const [index,setIndex] = useState(0)
   const { showExerciseArray,serchExercise } = useStore();
   const [exercise,setExercise] = useState([]);
-  console.log(serchExercise)
   useEffect(() => {
     if(serchExercise!=='' && serchExercise!=='all'){
       const getData = async() =>{
@@ -49,7 +48,11 @@ function Exercises() {
       <Typography 
       variant="h4"
       fontFamily='Hahmlet'
-      sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+      color='var(--secondary-color)'
+      sx={{ 
+        fontSize: { lg: '44px', xs: '30px' } 
+        }} 
+      mb="46px">
       Showing Results</Typography>
       <Stack 
       direction="row" 

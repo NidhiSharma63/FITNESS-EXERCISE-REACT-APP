@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
-body {
-    font-family: 'Hahmlet', serif;
-    background-color: #FFFAFB;
-  }
   
+  .light{
+    --background-color:#FFFAFB;
+    --primary-color: #d32f2f;
+    --seconday-color:rgb(15, 15, 15);
+    --accent-color:#ff2625;
+  }
+  .Dark{
+    --background-color:rgb(20,26,31);
+    --primary-color: #d32f2f;
+    --secondary-color:white;
+    --accent-color:beige;
+  }
+  body {
+    font-family: 'Hahmlet', serif;
+    background-color:var(--background-color);
+  }
   * {
     padding: 0px;
     margin: 0px;
@@ -38,7 +50,7 @@ body {
   
   .exercise-card {
     width: 400px;
-    height: 445px;
+    height: 458px;
     background: #fff;
     border-top: 4px solid #FF2625;
     /* box-shadow: 0px 1px 7px -3px rgb(92, 78, 78); */

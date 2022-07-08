@@ -4,6 +4,7 @@ import {fetchData,options} from '../utils/FetchData';
 import HorizontalScrollBar from './HorizontalScrollBar';
 import useStore from '../store';
 import { InputLabel } from '@mui/material';
+import data from '../data';
 
 const url = 'https://exercisedb.p.rapidapi.com/exercises'
 
@@ -16,13 +17,14 @@ function SearchExercises() {
   const [search,setSearch] = useState('');
 
   useEffect(()=>{
-    const fecthExerciseData = async() =>{
-      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
-      setDataType([...bodyPartsData,'all']);
-      const exerciseData = await fetchData(url,options);
-      setShowExercise(exerciseData);
-    }
-    fecthExerciseData();
+    setShowExercise(data)
+    // const fecthExerciseData = async() =>{
+    //   const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',options);
+    //   setDataType([...bodyPartsData,'all']);
+    //   const exerciseData = await fetchData(url,options);
+    //   setShowExercise(exerciseData);
+    // }
+    // fecthExerciseData();
     setSearch('')
   },[]);
 
@@ -45,7 +47,8 @@ function SearchExercises() {
         mb='50px' 
         fontFamily='Hahmlet'
         sx={{fontSize:{lg:'44px',xs:'30px'}}} 
-        fontWeight='700'>
+        fontWeight='700'
+        color='var(--secondary-color)'>
         Awesome Exercises you <br/>should know
       </Typography>
       <Box 
@@ -60,6 +63,7 @@ function SearchExercises() {
           variant='outlined'
           sx={{
             border:'none',
+            color:'var(--primary-color)',
             input:{
                 height:"24.5px",
                 fontSize:'20px',

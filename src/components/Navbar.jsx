@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import {Stack,Button} from '@mui/material';
+import {Stack,Button,Box} from '@mui/material';
 import Logo from '../assets/images/Logo.png'
 
 const style= {
@@ -21,22 +21,27 @@ const homeLink = {
 
 function Navbar() {
 
+  const body = document.querySelector('body');
+  const [theme,setTheme] = useState('');
   useEffect(()=>{
     const getTheme = localStorage.getItem('theme');
     if(getTheme === null){
-      document.body.classList.add('light');
+      body.classList.add('light');
+      setTheme('light');
     }else{
-      document.body.classList.add(getTheme);
+      body.classList.add(getTheme);
+      setTheme(getTheme);
     }
   },[]);
 
   const changeTheme = () =>{
-    const body = document.querySelector('body');
     body.className==='light' ? body.classList.add('Dark') : body.classList.remove('Dark');
     if(body.classList.contains('Dark')){
       localStorage.setItem('theme','Dark');
+      setTheme('Dark');
     }else {
       localStorage.setItem('theme','light');
+      setTheme('light');
     }
   }
 
@@ -58,14 +63,31 @@ function Navbar() {
         <Link to='/' style={homeLink}>
           Home
         </Link>
-        <Button
-         onClick={()=>changeTheme()}>dark</Button>
         <a href="#exercise" 
           style={link}
           onClick={()=>{
             window.scrollTo({ top:1600, behavior: 'smooth' });
           }}>Exercises</a>
+          <Box
+            p='3px'
+            position="relative"
+            width="70px"
+            borderRadius="10px"
+            height="30px"
+            backgroundColor="var(--toggle-bg-color)"
+            onClick={()=>changeTheme()}>
+            <Box 
+            position="absolute"
+            cursor="pointer"
+            height='80%'
+            width='26px'
+            backgroundColor='orange'
+            borderRadius='50%'
+            transition='all 0.7s ease-in-out'
+            className={theme==='Dark'?'move-btn':'no-move-btn'}></Box>
+        </Box>
       </Stack>
+      
     </Stack>
   )
 }

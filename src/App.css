@@ -8,6 +8,7 @@
     --accent-color:#ff2625;
     --exercise-bg-color:white;
     --footer-bg-color: #FFF3F4;
+    --toggle-bg-color:rgb(20,26,31);
   }
   .Dark{
     --background-color:rgb(20,26,31);
@@ -15,7 +16,8 @@
     --secondary-color:white;
     --accent-color:beige;
     --exercise-bg-color:rgb(16,31,41);
-    --footer-bg-color:rgb(16,31,41)
+    --footer-bg-color:rgb(16,31,41);
+    --toggle-bg-color:white;
   }
   body {
     font-family: 'Hahmlet', serif;
@@ -54,7 +56,7 @@
   
   .exercise-card {
     width: 400px;
-    height: 498px;
+    height: 49  8px;
     background: var(--exercise-bg-color);
     border-top: 4px solid #FF2625;
     /* box-shadow: 0px 1px 7px -3px rgb(92, 78, 78); */
@@ -96,6 +98,28 @@
     text-decoration: none;
   }
   
+  .no-move-btn{
+    left: 1px;
+    transition: all .7s;
+  }
+
+  .move-btn{
+    animation-name: moveBtn;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    left:40px
+  }
+
+
+  @keyframes moveBtn {
+    0% {
+      left:0px;
+    }
+    100% {
+      left:40px;
+    }
+  }
+
   @media screen and (max-width:1200px) {
     .detail-image {
       width: 300px;

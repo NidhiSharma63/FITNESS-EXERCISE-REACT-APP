@@ -20,15 +20,24 @@ const homeLink = {
 }
 
 function Navbar() {
-  const [theme, setTheme] = React.useState('light');
 
   useEffect(()=>{
-    document.body.classList.add('light');
+    const getTheme = localStorage.getItem('theme');
+    if(getTheme === null){
+      document.body.classList.add('light');
+    }else{
+      document.body.classList.add(getTheme);
+    }
   },[]);
 
   const changeTheme = () =>{
     const body = document.querySelector('body');
     body.className==='light' ? body.classList.add('Dark') : body.classList.remove('Dark');
+    if(body.classList.contains('Dark')){
+      localStorage.setItem('theme','Dark');
+    }else {
+      localStorage.setItem('theme','light');
+    }
   }
 
   return (

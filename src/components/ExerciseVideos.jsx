@@ -13,7 +13,7 @@ const ExerciseVideos = () => {
         p="20px">
       <Typography 
         sx={{ fontSize: { lg: '44px', xs: '25px' } }}  
-        color="#000" 
+        color='var(--secondary-color)' 
         fontFamily='Hahmlet'
         mb="33px">
         Watch <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>{ClickedExercise}</span> exercise videos
@@ -45,12 +45,13 @@ const ExerciseVideos = () => {
                   fontSize: { lg: '28px', xs: '18px' } 
                 }} 
                 fontFamily='Hahmlet'
-                color="#000">
+                color='var(--secondary-color)'
+                >
                 {item.video.title}
               </Typography>
               <Typography 
                 fontSize="14px" 
-                color="#000"
+                color='var(--secondary-color)'
                 fontFamily='Hahmlet'
                >
                 {item.video.channelName}

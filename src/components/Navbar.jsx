@@ -81,7 +81,7 @@ function Navbar() {
             cursor="pointer"
             height='80%'
             width='26px'
-            backgroundColor='orange'
+            backgroundColor='var(--background-color)'
             borderRadius='50%'
             transition='all 0.7s ease-in-out'
             className={theme==='Dark'?'move-btn':'no-move-btn'}></Box>

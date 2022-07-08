@@ -39,7 +39,7 @@ function ExerciseDetails() {
         const equimentExercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/equipment/body weight`, options);
         setSimiliarEquipmentExercise(equimentExercisesData);
       };
-    // getData();
+    getData();
   },[])
   return (
 

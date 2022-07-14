@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FITNESS-EXERCISE-REACT-APP%20%20/static/css/main.d30c886a.css",
-    "main.js": "/FITNESS-EXERCISE-REACT-APP%20%20/static/js/main.6f70ebd9.js",
-    "static/media/banner.png": "/FITNESS-EXERCISE-REACT-APP%20%20/static/media/banner.5209b5e92a864ca0c615.png",
-    "static/media/gym.png": "/FITNESS-EXERCISE-REACT-APP%20%20/static/media/gym.6e701417c428e2fbc267.png",
-    "index.html": "/FITNESS-EXERCISE-REACT-APP%20%20/index.html",
-    "main.d30c886a.css.map": "/FITNESS-EXERCISE-REACT-APP%20%20/static/css/main.d30c886a.css.map",
-    "main.6f70ebd9.js.map": "/FITNESS-EXERCISE-REACT-APP%20%20/static/js/main.6f70ebd9.js.map"
+    "main.css": "/FITNESS-EXERCISE-REACT-APP/static/css/main.d30c886a.css",
+    "main.js": "/FITNESS-EXERCISE-REACT-APP/static/js/main.0d2f46bd.js",
+    "static/media/banner.png": "/FITNESS-EXERCISE-REACT-APP/static/media/banner.5209b5e92a864ca0c615.png",
+    "static/media/gym.png": "/FITNESS-EXERCISE-REACT-APP/static/media/gym.6e701417c428e2fbc267.png",
+    "index.html": "/FITNESS-EXERCISE-REACT-APP/index.html",
+    "main.d30c886a.css.map": "/FITNESS-EXERCISE-REACT-APP/static/css/main.d30c886a.css.map",
+    "main.0d2f46bd.js.map": "/FITNESS-EXERCISE-REACT-APP/static/js/main.0d2f46bd.js.map"
   },
   "entrypoints": [
     "static/css/main.d30c886a.css",
-    "static/js/main.6f70ebd9.js"
+    "static/js/main.0d2f46bd.js"
   ]
 }

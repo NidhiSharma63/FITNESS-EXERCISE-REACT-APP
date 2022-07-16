@@ -2,7 +2,7 @@
   "name": "gym-react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://NidhiSharma63.github.io/FITNESS-EXERCISE-REACT-APP  ",
+  "homepage": "http://NidhiSharma63.github.io/FITNESS-EXERCISE-REACT-APP",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",

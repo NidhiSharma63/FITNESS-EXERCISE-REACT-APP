@@ -4,7 +4,6 @@ import {fetchData,options} from '../utils/FetchData';
 import HorizontalScrollBar from './HorizontalScrollBar';
 import useStore from '../store';
 import { InputLabel } from '@mui/material';
-import data from '../data';
 
 const url = 'https://exercisedb.p.rapidapi.com/exercises'
 

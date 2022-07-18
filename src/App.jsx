@@ -33,7 +33,7 @@ function App() {
       >
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/FITNESS-EXERCISE-REACT-APP' element={<Home/>}/>
         <Route path='/exercise/:id' element={<ExerciseDetails/>}/>
       </Routes>
       <Footer/>

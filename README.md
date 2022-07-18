@@ -1,12 +1,15 @@
-# Exercise App 
- <img width='100px' src='./src/assets/images/readme.png'>
+# Exercise App <img width='50px' src='./src/assets/images/readme.png'>
 
-This project is created with `material ui` and    `react`.
+<img width='100%' src='./src/assets/images/landingpage.png'>
+
+<img width='100%' src='./src/assets/images/exerciseResult.png'>
+
+#### This project is created with `material ui` and    `react`.
 
 
 ## Features: Exercise App
 
-* This app is show more than thousand of exercise with exercises videos to make you fit .
+* This app show more than thousand of exercises with their video to make you fit .
 * It also show related exercises based on your searched exercise.
 
 

@@ -52,7 +52,7 @@ function Navbar() {
       sx={{gap:{sm:'122px',xs:'40px'}}}
       mt={{sm:'32px',xs:"20px"}}
       px="20px">
-      <Link to = '/'>
+      <Link to = '/FITNESS-EXERCISE-REACT-APP'>
         <img src={Logo} style={style}/>
       </Link>
       <Stack
@@ -60,7 +60,7 @@ function Navbar() {
         fontSize="24px"
         gap="40px"
         alignItems="flex-end">
-        <Link to='/' style={homeLink}>
+        <Link to='/FITNESS-EXERCISE-REACT-APP' style={homeLink}>
           Home
         </Link>
         <a href="#exercise" 

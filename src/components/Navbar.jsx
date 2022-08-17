@@ -68,24 +68,6 @@ function Navbar() {
           onClick={()=>{
             window.scrollTo({ top:1600, behavior: 'smooth' });
           }}>Exercises</a>
-          <Box
-            p='3px'
-            position="relative"
-            width="70px"
-            borderRadius="10px"
-            height="30px"
-            backgroundColor="var(--toggle-bg-color)"
-            onClick={()=>changeTheme()}>
-            <Box 
-            position="absolute"
-            cursor="pointer"
-            height='80%'
-            width='26px'
-            backgroundColor='var(--background-color)'
-            borderRadius='50%'
-            transition='all 0.7s ease-in-out'
-            className={theme==='Dark'?'move-btn':'no-move-btn'}></Box>
-        </Box>
       </Stack>
       
     </Stack>

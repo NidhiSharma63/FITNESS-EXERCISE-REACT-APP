@@ -1,16 +1,20 @@
 # Exercise App <img width='50px' src='./src/assets/images/readme.png'>
 
+# tools and technologies 
+<img width='20%' src='./src/assets/images/react.png'><img width='20%' src='./src/assets/images/js.png'><img width='20%' src='./src/assets/images/materialUI.png'>
+
 <img width='100%' src='./src/assets/images/landingpage.png'>
 
 <img width='100%' src='./src/assets/images/exerciseResult.png'>
 
-#### This project is created with `material ui` and    `react`.
-
-
 ## Features: Exercise App
 
-* This app show more than thousand of exercises with their video to make you fit .
-* It also show related exercises based on your searched exercise.
+* This app shows more than a thousand of exercises with their video to make you fit .
+* It also show related exercises based on your searched exercise with their videos .
+
+
+## scripts
+`npm install` and `npm start`
 
 
 ### [`Checkout Now`](https://nidhisharma63.github.io/FITNESS-EXERCISE-REACT-APP/)

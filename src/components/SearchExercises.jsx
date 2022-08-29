@@ -11,7 +11,8 @@ function SearchExercises() {
   TypesArray,
   setDataType,
   setShowExercise,
-  GetSearchExercise}  = useStore()
+  GetSearchExercise,
+  bodyPartNotFound}  = useStore()
   const [search,setSearch] = useState('');
 
   useEffect(()=>{
@@ -96,6 +97,7 @@ function SearchExercises() {
           href="#exercises"
           onClick={handleSubmit}>Search
         </Button>
+        {bodyPartNotFound && <Typography color="red" fontSize='20px' mt='10px'>Body part not found</Typography>}
       </Box>
         <HorizontalScrollBar Array={TypesArray}/>
     </Stack>

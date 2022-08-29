@@ -8,13 +8,21 @@ import Loader from './Loader';
 
 function Exercises() {
   const [index,setIndex] = useState(0)
-  const { showExerciseArray,serchExercise } = useStore();
+  const { showExerciseArray,serchExercise,setBodyPartError,bodyPartNotFound } = useStore();
   const [exercise,setExercise] = useState([]);
   useEffect(() => {
     if(serchExercise!=='' && serchExercise!=='all'){
       const getData = async() =>{
         const bodyPartData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${serchExercise}`,options);
-        setExercise(bodyPartData);
+        if(bodyPartData===undefined) {
+          setBodyPartError(true);
+          console.log(bodyPartNotFound)
+          return
+        };
+        if(bodyPartData!=undefined){
+          setBodyPartError(false);
+          setExercise(bodyPartData);
+        }
       }
       getData();
     }else if(serchExercise==='all'){
@@ -27,6 +35,7 @@ function Exercises() {
 
   
   const itemsPerPage = 12;
+
   const numberOfPages = Math.ceil(exercise.length / itemsPerPage);
   
   const newExercise = Array.from({ length: numberOfPages }, (_, index) => {

@@ -23,7 +23,9 @@ const useStore = create(
       exerciseVideo:[],
       SimiliarTargetExercise:[],
       SimiliarEquipmentExercise:[],
+      bodyPartNotFound:false,
 
+      setBodyPartError:(value) =>{set(state=>({bodyPartNotFound:value}))},
       setDataType:(data)=>{set(state => ({TypesArray: data}))},
       setShowExercise:(data)=>{set(state => ({showExerciseArray: data}))},
       GetSearchExercise: (search) => set(state => ({serchExercise:search})),

@@ -1,7 +1,7 @@
 # Exercise App <img width='50px' src='./src/assets/images/readme.png'>
 
 # tools and technologies 
-<img width='20%' src='./src/assets/images/react.png'><img width='20%' src='./src/assets/images/js.png'><img width='20%' src='./src/assets/images/materialUI.png'>
+<img width='20%' src='./src/assets/images/react.png'><img width='20%' src='./src/assets/images/js.png'><img width='20%' src='./src/assets/images/materialUI.png'><img width='30%' src='./src/assets/images/zustand.png'>
 
 <img width='100%' src='./src/assets/images/landingpage.png'>
 

@@ -17,4 +17,4 @@
 `npm install` and `npm start`
 
 
-### [`Checkout Now`](https://nidhisharma63.github.io/FITNESS-EXERCISE-REACT-APP/)
+### [`Check Now`](https://nidhisharma63.github.io/FITNESS-EXERCISE-REACT-APP/)
